@@ -23,7 +23,7 @@ provider "google" {
 }
 
 resource "google_compute_network" "vpc_network" {
-  name = "sam-vpc-network"
+  name = "sam-demo-vpc-network"
 }
 
 resource "google_compute_instance" "vm_instance" {
