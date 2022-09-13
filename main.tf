@@ -21,14 +21,14 @@ terraform {
   }
 }
 
-provider "doormat" {
-  data "doormat_gcp_credentials" "creds" {
+provider "doormat" {}
+
+data "doormat_gcp_credentials" "creds" {
     provider = doormat
 
     service_account = "samuel.lee@hashicorp.com"
     project_id      = "hc-ba2320067c904daea31de2e996c"
   }
-}
 
 provider "google" {
   access_token = data.doormat_gcp_credentials.creds.access_token
