@@ -27,7 +27,7 @@ data "doormat_gcp_credentials" "creds" {
   provider = doormat
 
   service_account = "samuel.lee@hashicorp.com"
-  project_id      = "hc-ba2320067c904daea31de2e996c"
+  project_id        = "hc-ba2320067c904daea31de2e996c"
 }
 
 provider "google" {
@@ -38,6 +38,6 @@ provider "google" {
 }
 
 resource "google_compute_network" "vpc_network" {
-  name = "sam-gpc-vpcNetwork"
+  name = "sam-gpc-vpc-network"
 }
 
