@@ -33,8 +33,8 @@ data "doormat_gcp_credentials" "creds" {
 provider "google" {
   access_token = data.doormat_gcp_credentials.creds.access_token
   project      = "hc-ba2320067c904daea31de2e996c"
-  region       = "us-central1"
-  zone         = "us-central1-c"
+  region       = "australia-southeast1"
+  zone         = "a"
 }
 
 resource "google_compute_network" "vpc_network" {
