@@ -21,7 +21,7 @@ terraform {
   }
 }
 
-provider "doormat" {}
+// provider "doormat" {}
 /*
 data "doormat_gcp_credentials" "creds" {
   provider = doormat
@@ -31,7 +31,7 @@ data "doormat_gcp_credentials" "creds" {
 }*/
 
 provider "google" {
-  access_token = data.doormat_gcp_credentials.creds.access_token
+  //access_token = data.doormat_gcp_credentials.creds.access_token
   project      = "hc-ba2320067c904daea31de2e996c"
   region       = "australia-southeast1"
   zone         = "a"
