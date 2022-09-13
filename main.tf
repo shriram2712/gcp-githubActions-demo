@@ -19,7 +19,7 @@ terraform {
 provider "google" {
   project      = "hc-ba2320067c904daea31de2e996c"
   region       = "australia-southeast1"
-  zone         = "a"
+  zone         = "australia-southeast1-a"
 }
 
 resource "google_compute_network" "vpc_network" {
