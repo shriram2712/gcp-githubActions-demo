@@ -27,8 +27,8 @@ resource "google_compute_network" "vpc_network" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "terraform-instance"
-  machine_type = "f1-micro"
+  name         = "sam-terraform-instance"
+  machine_type = "e2-medium"
   tags = ["gh-action", "demo"]
 
   boot_disk {
