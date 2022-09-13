@@ -27,7 +27,7 @@ resource "google_compute_network" "vpc_network" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "sam-terraform-instance"
+  name         = "sam-terraform-instance-demo"
   machine_type = "e2-medium"
   tags = ["gh-action", "demo"]
 
@@ -40,7 +40,7 @@ resource "google_compute_instance" "vm_instance" {
   scratch_disk {
     interface = "SCSI"
   }
-  
+
   network_interface {
     network = google_compute_network.vpc_network.name
     access_config {
