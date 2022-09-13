@@ -27,9 +27,9 @@ jobs:
       - name: Format Terraform Code
         id: tf-fmt
         run: terraform fmt
-        
+
       # Checks for configuration's formatting
-      - name: Terraform Format
+      - name: Terraform Format Check
         id: fmt
         run: terraform fmt -check # Runs terraform fmt check
 

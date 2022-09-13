@@ -12,13 +12,22 @@ terraform {
   }
   required_version = ">= 1.1.0"
 
-  cloud {
+  backend "remote" {
+    hostname     = "app.terraform.io"
     organization = "samuelleezy-hashicorp-demo"
 
     workspaces {
       name = "gcp-githubActions-demo"
     }
   }
+  /*
+  cloud {
+    organization = "samuelleezy-hashicorp-demo"
+
+    workspaces {
+      name = "gcp-githubActions-demo"
+    }
+  } */
 }
 
 provider "doormat" {}
