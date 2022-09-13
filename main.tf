@@ -11,23 +11,14 @@ terraform {
 
   }
   required_version = ">= 1.1.0"
-
-  backend "remote" {
-    hostname     = "app.terraform.io"
-    organization = "samuelleezy-hashicorp-demo"
-
-    workspaces {
-      name = "gcp-githubActions-demo"
-    }
-  }
-  /*
+  
   cloud {
     organization = "samuelleezy-hashicorp-demo"
 
     workspaces {
       name = "gcp-githubActions-demo"
     }
-  } */
+  }
 }
 
 provider "doormat" {}
@@ -35,7 +26,7 @@ provider "doormat" {}
 data "doormat_gcp_credentials" "creds" {
   provider = doormat
 
-  service_account = "samuel.lee@hashicorp.com"
+  service_account = "samuel-lee-dev@hc-ba2320067c904daea31de2e996c.iam.gserviceaccount.com"
   project_id        = "hc-ba2320067c904daea31de2e996c"
 }
 
